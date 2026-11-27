@@ -10,13 +10,13 @@ function linkList(links) {
       : "";
     return '<li><a class="link-entry' + (logo ? ' link-entry--with-logo' : '') + '" href="' + html(url) + '">' +
       mark + '<span class="link-title">' + html(name) +
-      '</span></a></li>';
+      '</span><span class="outbound" aria-hidden="true">↗</span></a></li>';
   }).join("") + '</ul>';
 }
 
 export function renderCard(profile) {
   const {
-    name, monogram, username, role, school, graduation, city, biography, email,
+    name, givenName, familyName, monogram, username, role, school, graduation, city, biography, email,
     canonicalUrl, portfolioUrl, showcaseUrl, linkedInUrl, portrait, socialPreview,
     professionalProfiles, engineeringProfiles, socialProfiles
   } = profile;
@@ -53,7 +53,7 @@ export function renderCard(profile) {
     "<!doctype html>",
     '<html lang="en"><head><meta charset="utf-8">',
     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
-    '<meta name="theme-color" content="#0b0b0b">',
+    '<meta name="theme-color" content="#030303">',
     "<title>" + html(title) + "</title>",
     '<meta name="description" content="' + html(description) + '">',
     '<meta name="robots" content="index, follow, max-image-preview:large">',
@@ -75,24 +75,25 @@ export function renderCard(profile) {
     '<div class="frame"><header class="masthead"><div class="brand"><span class="brand-mark" aria-hidden="true">' +
       html(monogram) + '</span><span>Digital Identity</span></div></header>',
     '<main id="main" class="layout">',
-    '<section class="identity" aria-labelledby="identity-name">',
+    '<section class="identity" aria-labelledby="identity-name"><p class="eyebrow"><b>01</b> / THE IDENTITY</p>',
     '<div class="identity-lead"><div><p class="handle">@' + html(username) + '</p>' +
-      '<h1 id="identity-name">' + html(name) + '</h1></div>' +
+      '<h1 id="identity-name">' + html(givenName) + ' <span>' + html(familyName) + '.</span></h1></div>' +
       '<div class="portrait"><img src="' + asset + html(portrait.src) +
       '" width="' + portrait.width + '" height="' + portrait.height +
       '" fetchpriority="high" alt="' + html(portrait.alt) + '"></div></div>',
+    '<p class="maker">ENGINEER / BUILDER / MAKER</p>',
     '<p class="role">' + html(role) + '</p>',
-    '<p class="bio">' + html(biography) + '</p>',
+    '<p class="education">PICT Pune · Class of ' + html(graduation) + '</p>',
+    '<p class="award">5× Hackathon &amp; Innovation Awardee</p>',
     '<nav class="actions" aria-label="Primary actions"><a class="action action-primary" href="' +
-      html(portfolioUrl) + '">Open profile</a><a class="action" href="' + asset +
-      'sanskar-tiwari.vcf" download>Save profile</a><a class="action" href="' +
-      html(showcaseUrl) + '">View projects</a></nav>',
-    '<section class="other-profiles" aria-labelledby="other-profiles-title"><h2 id="other-profiles-title">Other profiles</h2>' +
-      linkList([
-        { name: "LinkedIn", url: linkedInUrl, logo: "logos/linkedin.svg" },
-        ...professionalProfiles, ...engineeringProfiles, ...socialProfiles
-      ]) + '</section>',
-    '<p class="education">' + html(school) + ' · Class of ' + html(graduation) + '</p>',
+      html(portfolioUrl) + '">Explore my work</a><a class="action" href="' + asset +
+      'sanskar-tiwari.vcf" download>Save contact</a><a class="action" href="' + html(showcaseUrl) +
+      '">View projects</a><a class="action" href="mailto:' + html(email) + '">Email me</a><a class="action share-jump" href="#share-panel">Share profile</a></nav></section>',
+    '<div class="directory"><section class="directory-section network"><h2 class="eyebrow"><b>02</b> / THE NETWORK</h2>' +
+      linkList([{ name: "LinkedIn", url: linkedInUrl, logo: "logos/linkedin.svg" }, ...professionalProfiles]) + '</section>',
+    '<section class="directory-section"><h2 class="eyebrow"><b>03</b> / PROOF OF WORK</h2>' + linkList(engineeringProfiles) + '</section>',
+    '<section class="directory-section"><h2 class="eyebrow"><b>04</b> / BUILDING IN PUBLIC</h2>' + linkList(socialProfiles) + '</section>',
+    '<section class="directory-section"><h2 class="eyebrow"><b>05</b> / MAKE CONTACT</h2>',
     '<details class="share-panel" id="share-panel"><summary>Share and contact</summary>',
     '<div class="share-content"><div class="share-tools">',
     '<div class="share-buttons"><a class="action" href="mailto:' + html(email) + '">Email me</a><button class="action" id="native-share" type="button" hidden>Share digital card</button>' +
@@ -103,7 +104,7 @@ export function renderCard(profile) {
     '<p id="action-status" class="action-status" role="status"></p></div>',
     '<div class="share-qr"><img src="' + asset + 'card-qr.svg" width="168" height="168" loading="lazy" alt="QR code for the digital identity card">' +
       '<div class="downloads"><a href="' + asset + 'card-qr.png" download>Download PNG</a>' +
-      '<a href="' + asset + 'card-qr.svg" download>Download SVG</a></div></div></div></details></section></main>',
-    '<footer class="footer">' + html(city) + '</footer></div></body></html>'
+      '<a href="' + asset + 'card-qr.svg" download>Download SVG</a></div></div></div></details></section></div></main>',
+    '<footer class="footer">' + '<strong>LESS TALK.<br><span>MORE BUILDING.</span></strong><p>' + html(city) + '</p></footer></div></body></html>'
   ].join("\n");
 }

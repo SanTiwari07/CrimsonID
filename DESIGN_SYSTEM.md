@@ -38,7 +38,7 @@ The primary portfolio defines the black base, charcoal surface, off-white type, 
 
 Foundation contrast ratios are 18.92:1 for off-white on the canvas, 5.58:1 for source gray on the surface and 7.72:1 for lighter gray on the surface. Bright red on the surface gives 5.64:1, and dark text on bright red gives 5.87:1. Off-white on the base red gives 4.19:1, below the 4.5:1 AA threshold for regular text. Check the rendered text and focus states after CSS changes. [W3C contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
 
-## Current direction
+## Previous direction
 
 The current card uses charcoal, portfolio red and off-white. Cinematographer Jeff Cronenweth describes the film’s desaturated palette, practical lighting and willingness to let parts of the frame go dark. The card takes those cues into near-black surfaces, bright type and a small hatched edge on the photograph. Sanskar supplied the portrait directly. [American Society of Cinematographers](https://theasc.com/article/flashback-fight-club/) · [Cooke Optics interview](https://www.youtube.com/watch?v=GFqODinvros)
 
@@ -83,3 +83,8 @@ Self-host the required WOFF2 files with a system fallback and `font-display: swa
 - Actions remain readable and tappable with enlarged text, and keyboard focus is visible across sections.
 - Profile rows keep aligned spacing and avoid clipping or horizontal overflow.
 - Tablet and desktop layouts retain the phone reading order while using the available width.
+
+
+## Final editorial cover
+
+The cover combines oversized Inter Tight, the supplied portrait at up to its native 180 pixel size and a graphite field with racing red (#D5001C). Halftone is limited to the portrait area. Five numbered sections organize the identity, network, proof-of-work links, public channels and contact details. The five-award headline matches the five podiums listed in the public showcase and primary portfolio awards section. [Showcase recognition](https://santiwari07.github.io/#awards)

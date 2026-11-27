@@ -54,3 +54,8 @@ document.querySelectorAll(".portrait img").forEach((image) => {
   image.addEventListener("error", hideBrokenImage, { once: true });
   if (image.complete && image.naturalWidth === 0) hideBrokenImage();
 });
+
+
+document.querySelector(".share-jump").addEventListener("click", () => {
+  document.getElementById("share-panel").open = true;
+});
