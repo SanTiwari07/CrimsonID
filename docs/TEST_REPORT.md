@@ -49,7 +49,7 @@ Lighthouse 13.6.0 used headless Chrome 158 on Windows at the local route. Mobile
 
 A prior Chrome Event Timing run used the 390 × 844 touch viewport, 4× CPU throttling and a 150 ms / 1.6 Mbps network simulation. Twelve disclosure and clipboard interactions recorded a longest candidate duration of **32 ms**. Production field INP requires visits to a deployed page.
 
-[Interactive Lighthouse report](reports/lighthouse-mobile.report.html) · [Lighthouse JSON](reports/lighthouse-mobile.report.json)
+[Interactive Lighthouse report](../reports/lighthouse-mobile.report.html) · [Lighthouse JSON](../reports/lighthouse-mobile.report.json)
 
 ## Accessibility and release checks
 

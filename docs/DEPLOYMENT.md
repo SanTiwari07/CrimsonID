@@ -43,7 +43,7 @@ The main [Portfolio repository](https://github.com/SanTiwari07/Portfolio) contai
 
 For an authorized card-only host, configure Vercel with the card repository as the project root. The included `vercel.json` runs `npm run build`, publishes `dist`, redirects the standalone homepage to `/card`, maps `/card` to the generated page and sets the contact headers. No environment variables or service credentials are required by the card build.
 
-A Vercel preview URL is for validation. Its content deliberately points to the configured production canonical address for sharing and QR. If choosing GitHub Pages or another host, expose the built card and asset tree at the chosen public paths and check the vCard response and any slash redirects. Change `profile.mjs` before building for a different permanent address, and keep the public path, displayed address, metadata and QR in agreement. [GitHub Pages custom-domain support](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
+A Vercel preview URL is for validation. Its content deliberately points to the configured production canonical address for sharing and QR. If choosing GitHub Pages or another host, expose the built card and asset tree at the chosen public paths and check the vCard response and any slash redirects. Change `src/profile.mjs` before building for a different permanent address, and keep the public path, displayed address, metadata and QR in agreement. [GitHub Pages custom-domain support](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)
 
 ## Release verification
 

@@ -1,6 +1,6 @@
 # Maintenance
 
-Edit [profile.mjs](profile.mjs) to change the public identity. The build reads this configuration to render HTML, metadata, the contact file and QR assets. Make changes in a branch and review the actual card before an approved release.
+Edit [src/profile.mjs](../src/profile.mjs) to change the public identity. The build reads this configuration to render HTML, metadata, the contact file and QR assets. Make changes in a branch and review the actual card before an approved release.
 
 ## Change profile content
 

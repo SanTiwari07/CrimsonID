@@ -30,11 +30,12 @@ Sources. [Primary portfolio](https://santiwari07.qzz.io/) · [Primary source](ht
 
 | Component | Responsibility |
 | --- | --- |
-| `profile.mjs` | Owner-editable profile, network links, media paths and canonical URL |
-| `render.mjs` | Build-time semantic HTML, canonical and Open Graph metadata, structured data and real links |
-| `integrations.mjs` | Build-time UTF-8 vCard 3.0, lossless PNG and SVG QR with a quiet zone |
-| `assets/` | Mobile-first CSS, progressively enhanced sharing and copy controls, self-hosted fonts and the supplied portrait and locally hosted icons |
-| `preview.mjs` | Local file server for the exact card path and representative download headers |
+| `src/profile.mjs` | Owner-editable profile, network links, media paths and canonical URL |
+| `src/render.mjs` | Build-time semantic HTML, canonical and Open Graph metadata, structured data and real links |
+| `src/integrations.mjs` | Build-time UTF-8 vCard 3.0, lossless PNG and SVG QR with a quiet zone |
+| `assets/` | Mobile-first CSS, self-hosted fonts, the supplied portrait and locally hosted icons |
+| `scripts/build.mjs` | Static build entry point generating `dist/card/` and `dist/card-assets/` |
+| `scripts/preview.mjs` | Local file server for the exact card path and representative download headers |
 | `vercel.json` | Static output, exact card route, standalone root redirect and vCard response headers |
 
 Plain HTML, CSS and small JavaScript keep the recipient flow independent of client rendering. The Node build centralizes data and generates both QR formats offline. React/Vite inside the portfolio would simplify shared components but couple the card to the portfolio’s runtime. Astro could provide a static export, with a framework dependency for one page. A standalone static build can be integrated as a narrow route or served from its own host.

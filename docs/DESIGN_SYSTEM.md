@@ -2,13 +2,13 @@
 
 ## Design exploration
 
-**A — Motorsport Minimalism.** A narrow black identity plate with one red rule, a compact portrait and a strong action bar. A linear list takes visitors through work and profiles. The racing cues make a strong first impression and could dominate the engineering content.
+**A: Motorsport Minimalism.** A narrow black identity plate with one red rule, a compact portrait and a strong action bar. A linear list takes visitors through work and profiles. The racing cues make a strong first impression and could dominate the engineering content.
 
-**B — Precision Editorial.** A compact portrait and prominent name establish the identity. The primary actions follow immediately, with selected projects and clearly titled directories below. On wider screens, the identity anchors the left column while work and links occupy the right.
+**B: Precision Editorial.** A compact portrait and prominent name establish the identity. The primary actions follow immediately, with selected projects and clearly titled directories below. On wider screens, the identity anchors the left column while work and links occupy the right.
 
-**C — Digital Identity Dashboard.** A compact grid of work, profiles and sharing utilities lets repeat visitors jump to specific destinations. The initial view presents more choices and the tiles form a longer stack on phones. Its compactness pays off most on tablets and desktops.
+**C: Digital Identity Dashboard.** A compact grid of work, profiles and sharing utilities lets repeat visitors jump to specific destinations. The initial view presents more choices and the tiles form a longer stack on phones. Its compactness pays off most on tablets and desktops.
 
-| Criterion | A — Motorsport Minimalism | B — Precision Editorial | C — Digital Identity Dashboard |
+| Criterion | A: Motorsport Minimalism | B: Precision Editorial | C: Digital Identity Dashboard |
 | --- | --- | --- | --- |
 | Personal brand consistency | Closest to the primary portfolio’s motorsport accents | Uses the primary palette and the project showcase’s editorial hierarchy | Engineering cues fit, with a different visual language |
 | First impression | Immediate visual character | Name, specialty and actions dominate | More choices compete with the identity |
@@ -20,7 +20,7 @@
 | Long-term maintainability | Straightforward linear template | Reusable project and link rows driven by profile data | More grid breakpoints and tile variants |
 | NFC suitability | Fast identity and actions | Fast identity and actions followed by examples of work | More decisions at first contact |
 
-**Original direction — Precision Editorial.** On a phone, the portrait, name, professional role and contact route form the introduction. The portfolio’s red accents, condensed headings and dark surfaces carry the brand. The project showcase provides a precedent for thin dividers and a readable project index.
+**Original direction: Precision Editorial.** On a phone, the portrait, name, professional role and contact route form the introduction. The portfolio’s red accents, condensed headings and dark surfaces carry the brand. The project showcase provides a precedent for thin dividers and a readable project index.
 
 ## Portfolio foundations
 

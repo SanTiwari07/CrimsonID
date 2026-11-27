@@ -12,29 +12,29 @@ Chrome 158 via Playwright. All three action buttons and eight profile links fit 
 
 | Viewport | Last action or profile link | Screenshot |
 | --- | ---: | --- |
-| 320 × 568 | 566 px | [Full page](screenshots/viewports/320x568.png) |
-| 360 × 640 | 559 px | [Full page](screenshots/viewports/360x640.png) |
-| 375 × 667 | 553 px | [Full page](screenshots/viewports/375x667.png) |
-| 390 × 844 | 553 px | [Full page](screenshots/viewports/390x844.png) |
-| 402 × 874 | 553 px | [Full page](screenshots/viewports/402x874.png) |
-| 412 × 915 | 555 px | [Full page](screenshots/viewports/412x915.png) |
-| 430 × 932 | 558 px | [Full page](screenshots/viewports/430x932.png) |
-| 568 × 320 | 262 px | [Full page](screenshots/viewports/568x320.png) |
-| 600 × 800 | 445 px | [Full page](screenshots/viewports/600x800.png) |
-| 667 × 375 | 271 px | [Full page](screenshots/viewports/667x375.png) |
-| 768 × 1024 | 537 px | [Full page](screenshots/viewports/768x1024.png) |
-| 844 × 390 | 286 px | [Full page](screenshots/viewports/844x390.png) |
-| 932 × 430 | 287 px | [Full page](screenshots/viewports/932x430.png) |
-| 1024 × 430 | 287 px | [Full page](screenshots/viewports/1024x430.png) |
-| 1024 × 768 | 537 px | [Full page](screenshots/viewports/1024x768.png) |
-| 1280 × 720 | 537 px | [Full page](screenshots/viewports/1280x720.png) |
-| 1280 × 800 | 537 px | [Full page](screenshots/viewports/1280x800.png) |
-| 1366 × 768 | 537 px | [Full page](screenshots/viewports/1366x768.png) |
-| 1440 × 900 | 537 px | [Full page](screenshots/viewports/1440x900.png) |
-| 1920 × 1080 | 537 px | [Full page](screenshots/viewports/1920x1080.png) |
-| 2560 × 1080 | 537 px | [Full page](screenshots/viewports/2560x1080.png) |
+| 320 × 568 | 566 px | [Full page](../screenshots/viewports/320x568.png) |
+| 360 × 640 | 559 px | [Full page](../screenshots/viewports/360x640.png) |
+| 375 × 667 | 553 px | [Full page](../screenshots/viewports/375x667.png) |
+| 390 × 844 | 553 px | [Full page](../screenshots/viewports/390x844.png) |
+| 402 × 874 | 553 px | [Full page](../screenshots/viewports/402x874.png) |
+| 412 × 915 | 555 px | [Full page](../screenshots/viewports/412x915.png) |
+| 430 × 932 | 558 px | [Full page](../screenshots/viewports/430x932.png) |
+| 568 × 320 | 262 px | [Full page](../screenshots/viewports/568x320.png) |
+| 600 × 800 | 445 px | [Full page](../screenshots/viewports/600x800.png) |
+| 667 × 375 | 271 px | [Full page](../screenshots/viewports/667x375.png) |
+| 768 × 1024 | 537 px | [Full page](../screenshots/viewports/768x1024.png) |
+| 844 × 390 | 286 px | [Full page](../screenshots/viewports/844x390.png) |
+| 932 × 430 | 287 px | [Full page](../screenshots/viewports/932x430.png) |
+| 1024 × 430 | 287 px | [Full page](../screenshots/viewports/1024x430.png) |
+| 1024 × 768 | 537 px | [Full page](../screenshots/viewports/1024x768.png) |
+| 1280 × 720 | 537 px | [Full page](../screenshots/viewports/1280x720.png) |
+| 1280 × 800 | 537 px | [Full page](../screenshots/viewports/1280x800.png) |
+| 1366 × 768 | 537 px | [Full page](../screenshots/viewports/1366x768.png) |
+| 1440 × 900 | 537 px | [Full page](../screenshots/viewports/1440x900.png) |
+| 1920 × 1080 | 537 px | [Full page](../screenshots/viewports/1920x1080.png) |
+| 2560 × 1080 | 537 px | [Full page](../screenshots/viewports/2560x1080.png) |
 
-[Phone first screen](screenshots/phone.png) · [iPhone 16-sized first screen](screenshots/iphone-16.png) · [Desktop first screen](screenshots/desktop.png) · [Phone share panel](screenshots/sharing-phone.png)
+[Phone first screen](../screenshots/phone.png) · [iPhone 16-sized first screen](../screenshots/iphone-16.png) · [Desktop first screen](../screenshots/desktop.png) · [Phone share panel](../screenshots/sharing-phone.png)
 
 ## Browser and device coverage
 
@@ -62,6 +62,6 @@ The three action buttons and eight direct profile links are visible by y=553 px 
 
 ## Accessibility, speed and physical status
 
-Axe found zero violations at 402 × 874 and 1440 × 900 with all profile links visible. Mobile Lighthouse scored 100 for Performance, Accessibility, Best Practices and SEO with simulated mobile throttling. LCP was 0.75 s and CLS 0.00027. The largest observed event duration in an earlier throttled interaction sample was 32 ms. [Detailed measurements](TEST_REPORT.md) · [Lighthouse report](reports/lighthouse-mobile.report.html)
+Axe found zero violations at 402 × 874 and 1440 × 900 with all profile links visible. Mobile Lighthouse scored 100 for Performance, Accessibility, Best Practices and SEO with simulated mobile throttling. LCP was 0.75 s and CLS 0.00027. The largest observed event duration in an earlier throttled interaction sample was 32 ms. [Detailed measurements](TEST_REPORT.md) · [Lighthouse report](../reports/lighthouse-mobile.report.html)
 
 Physical NFC, device camera QR scans, contact import and OS share-sheet behavior require verification after approved deployment. See the [NFC programming and device checklist](NFC_SETUP.md).
