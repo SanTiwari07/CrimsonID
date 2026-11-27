@@ -116,7 +116,6 @@ button, input { font: inherit; }
   font: 500 .75rem/1.4 var(--mono);
   letter-spacing: .055em;
 }
-.eyebrow b { color: var(--accent-light); font-weight: 500; }
 .identity-lead {
   position: relative;
   isolation: isolate;

@@ -75,7 +75,7 @@ export function renderCard(profile) {
     '<div class="frame"><header class="masthead"><div class="brand"><span class="brand-mark" aria-hidden="true">' +
       html(monogram) + '</span><span>Digital Identity</span></div></header>',
     '<main id="main" class="layout">',
-    '<section class="identity" aria-labelledby="identity-name"><p class="eyebrow"><b>01</b> / THE IDENTITY</p>',
+    '<section class="identity" aria-labelledby="identity-name">',
     '<div class="identity-lead"><div><p class="handle">@' + html(username) + '</p>' +
       '<h1 id="identity-name">' + html(givenName) + ' <span>' + html(familyName) + '.</span></h1></div>' +
       '<div class="portrait"><img src="' + asset + html(portrait.src) +
@@ -89,10 +89,10 @@ export function renderCard(profile) {
       html(portfolioUrl) + '">Explore my work</a><a class="action" href="' + asset +
       'sanskar-tiwari.vcf" download>Save contact</a><a class="action" href="' + html(showcaseUrl) +
       '">View projects</a><a class="action" href="mailto:' + html(email) + '">Email me</a><a class="action share-jump" href="#share-panel">Share profile</a></nav></section>',
-    '<div class="directory"><section class="directory-section network"><h2 class="eyebrow"><b>02</b> / THE NETWORK</h2>' +
+    '<div class="directory"><section class="directory-section network"><h2 class="eyebrow">THE NETWORK</h2>' +
       linkList([{ name: "LinkedIn", url: linkedInUrl, logo: "logos/linkedin.svg" }, ...professionalProfiles]) + '</section>',
-    '<section class="directory-section"><h2 class="eyebrow"><b>03</b> / PROOF OF WORK</h2>' + linkList(engineeringProfiles) + '</section>',
-    '<section class="directory-section"><h2 class="eyebrow"><b>04</b> / BUILDING IN PUBLIC</h2>' + linkList(socialProfiles) + '</section>',
+    '<section class="directory-section"><h2 class="eyebrow">PROOF OF WORK</h2>' + linkList(engineeringProfiles) + '</section>',
+    '<section class="directory-section"><h2 class="eyebrow">BUILDING IN PUBLIC</h2>' + linkList(socialProfiles) + '</section>',
     '<section class="directory-section"><h2 class="eyebrow"><b>05</b> / MAKE CONTACT</h2>',
     '<details class="share-panel" id="share-panel"><summary>Share and contact</summary>',
     '<div class="share-content"><div class="share-tools">',
