@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node build.mjs",
-    "dev": "npm run build && node preview.mjs"
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/preview.mjs"
   },
   "engines": {
     "node": ">=22"

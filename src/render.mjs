@@ -21,7 +21,7 @@ export function renderCard(profile) {
     professionalProfiles, engineeringProfiles, socialProfiles
   } = profile;
 
-  const title = name + " — Digital Identity";
+  const title = name + " - Digital Identity";
   const description = role + " based in " + city + ". Open my profile, save my contact or find me on other platforms.";
   const preview = new URL(asset + socialPreview, canonicalUrl).href;
   const person = {
