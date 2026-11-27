@@ -15,7 +15,7 @@ const types = {
   ".webp": "image/webp",
   ".woff2": "font/woff2"
 };
-const port = Number(process.env.CARD_PREVIEW_PORT ?? 4173);
+const port = Number(process.env.CARD_PREVIEW_PORT ?? 4743);
 const server = createServer(async (request, response) => {
   if (request.method !== "GET" && request.method !== "HEAD") {
     response.writeHead(405, { Allow: "GET, HEAD" }).end();
