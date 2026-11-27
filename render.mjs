@@ -27,7 +27,7 @@ export function renderCard(profile) {
   } = profile;
 
   const title = name + " — Digital Identity";
-  const description = role + " at PICT, Pune. Explore my engineering work, connect or save my contact.";
+  const description = role + " based in " + city + ". Explore my engineering work, connect or save my contact.";
   const preview = new URL(asset + socialPreview, canonicalUrl).href;
   const person = {
     "@type": "Person",

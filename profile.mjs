@@ -46,9 +46,9 @@ export default {
       summary: "A Snap Spectacles lens that visualizes speaker reflections and guides acoustic panel placement.",
       url: "https://santiwari07.github.io/projects/acoustic-mirror/",
       image: "images/acousticmirror.webp",
-      alt: "Speaker alignment and sound paths in the AcousticMirror Lens Studio preview",
-      width: 498,
-      height: 660
+      alt: "An acoustic reflection point on the left wall in the AcousticMirror Lens Studio preview",
+      width: 720,
+      height: 450
     }
   ],
   professionalProfiles: [
