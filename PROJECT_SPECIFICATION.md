@@ -2,9 +2,9 @@
 
 ## Visitor journey
 
-The visitor opens an HTTPS link from an NFC tap, QR scan or message. The first view presents the portrait, name, role and biography. Open profile and Save profile form the primary action row. Other profiles opens all eight connected profiles. View projects goes directly to the engineering showcase. Email and sharing stay in a separate disclosure.
+The visitor opens an HTTPS link from an NFC tap, QR scan or message. The first view presents the portrait, name, role and biography. Open profile, Save profile and View projects form the primary action row. All eight connected profiles are visible directly below it. View projects goes to the engineering showcase. Email and sharing stay in a separate disclosure.
 
-The Precision Editorial layout uses the portfolio dark backgrounds, ST initials and three established type families. The current skin uses worn olive accents, dark charcoal surfaces and local platform logos. Sanskar provided the portrait directly. See [Design system](DESIGN_SYSTEM.md) for the concepts, token choices and design rationale.
+The Precision Editorial layout uses the portfolio dark backgrounds, ST initials and three established type families. The current skin uses the portfolio red, dark charcoal surfaces and local platform logos. Sanskar provided the portrait directly. See [Design system](DESIGN_SYSTEM.md) for the concepts, token choices and design rationale.
 
 ## Portfolio and source audit
 

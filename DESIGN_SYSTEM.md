@@ -40,18 +40,18 @@ Foundation contrast ratios are 18.92:1 for off-white on the canvas, 5.58:1 for s
 
 ## Current direction
 
-The current card uses charcoal, worn olive and off-white. Cinematographer Jeff Cronenweth describes the film’s desaturated palette, practical lighting and willingness to let parts of the frame go dark. The card takes those cues into muted surfaces, bright type and a small hatched edge on the photograph. Sanskar supplied the portrait directly. [American Society of Cinematographers](https://theasc.com/article/flashback-fight-club/) · [Cooke Optics interview](https://www.youtube.com/watch?v=GFqODinvros)
+The current card uses charcoal, portfolio red and off-white. Cinematographer Jeff Cronenweth describes the film’s desaturated palette, practical lighting and willingness to let parts of the frame go dark. The card takes those cues into near-black surfaces, bright type and a small hatched edge on the photograph. Sanskar supplied the portrait directly. [American Society of Cinematographers](https://theasc.com/article/flashback-fight-club/) · [Cooke Optics interview](https://www.youtube.com/watch?v=GFqODinvros)
 
 | Role | Token | Use |
 | --- | --- | --- |
-| Canvas | `#10110F` | Main background |
-| Surface | `#191B16` | Cards, secondary actions and logo tiles |
-| Foreground | `#EEECE2` | Headings and body text |
-| Muted | `#B3B5A9` | Descriptions and supporting details |
-| Accent | `#C2C5AE` | Main action and restrained rules |
-| CTA ink | `#181A13` | Text on the main action |
+| Canvas | `#0B0B0B` | Main background |
+| Surface | `#171717` | Cards, secondary actions and logo tiles |
+| Foreground | `#F5F5F5` | Headings and body text |
+| Muted | `#BAB5B5` | Descriptions and supporting details |
+| Accent | `#E32636` | Portfolio red and structural accents |
+| Primary fill | `#BA1729` | Red fill with white action text |
 
-The phone opens with identity, role and two primary actions. Other profiles opens the platform directory, and View projects takes visitors to the engineering showcase. Contact and QR controls share a separate disclosure. This order applies Apple’s guidance on hierarchy and comfortable touch area. [Apple design principles](https://developer.apple.com/design/human-interface-guidelines/design-principles/) · [Apple button guidance](https://developer.apple.com/design/human-interface-guidelines/buttons)
+The phone opens with identity and the three main buttons, followed by eight directly visible profile links. View projects takes visitors to the engineering showcase. Contact and QR controls share a separate disclosure. This order applies Apple’s guidance on hierarchy and comfortable touch area. [Apple design principles](https://developer.apple.com/design/human-interface-guidelines/design-principles/) · [Apple button guidance](https://developer.apple.com/design/human-interface-guidelines/buttons)
 
 The white Zenodo wordmark and legacy Kaggle monogram come from first-party assets. GitHub, Devpost, LeetCode, YouTube and Instagram use Simple Icons 16.0.0 artwork. LinkedIn uses the [in] artwork from Simple Icons 11.15.0. Every mark sits beside the platform name. [Zenodo](https://about.zenodo.org/) · [Kaggle](https://www.kaggle.com/static/images/favicon.ico) · [Simple Icons 16.0.0](https://github.com/simple-icons/simple-icons/tree/16.0.0/icons) · [LinkedIn mark](https://github.com/simple-icons/simple-icons/blob/11.15.0/icons/linkedin.svg)
 
@@ -67,10 +67,10 @@ Self-host the required WOFF2 files with a system fallback and `font-display: swa
 
 ## Composition and behavior
 
-- Start with a single-column phone layout. A compact masthead leads to the portrait, identity and short biography. Put Open profile and Save profile immediately below, followed by Other profiles and View projects.
+- Start with a single-column phone layout. A compact masthead leads to the portrait, identity and short biography. Put Open profile, Save profile and View projects on one row, with the platform links directly below.
 - Keep share and QR controls close to the identity in a separate disclosure. Use inline disclosure to keep the first view compact. Give copy and fallback feedback in a screen-reader-announced status region.
-- Show project work through one link to the engineering showcase. Put recognizable platform names in the Other profiles disclosure.
-- Preserve DOM order through layout changes. Keep a single centered column on wide screens.
+- Show project work through one link to the engineering showcase. Put recognizable platform names in the Other profiles grid.
+- Preserve DOM order through layout changes. Keep a centered card on wide screens. In short landscape windows, place identity and links side by side.
 - Keep content in the normal reading flow on short landscape screens. Respect safe-area insets and allow browser zoom and text enlargement. [W3C reflow guidance](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
 - Prefer 48 × 48 CSS-pixel touch targets for standalone actions, with a visible keyboard outline and pressed feedback. Keep hover effects supplementary. [W3C target-size guidance](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
 - Use the supplied portrait. Reserve its dimensions and prioritize it on the first view. Use the ST initials in the favicon and masthead.

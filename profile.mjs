@@ -23,16 +23,16 @@ export default {
   },
   socialPreview: "images/social-preview.jpg",
   professionalProfiles: [
-    { name: "GitHub", logo: "logos/github.svg", description: "Source code and open-source work", url: "https://github.com/SanTiwari07" }
+    { name: "GitHub", logo: "logos/github.svg", url: "https://github.com/SanTiwari07" }
   ],
   engineeringProfiles: [
-    { name: "Devpost", logo: "logos/devpost.svg", description: "Hackathon projects and prototypes", url: "https://devpost.com/sanskartiwari-smt" },
-    { name: "Zenodo", logo: "logos/zenodo.svg", description: "Pothole detection research preprint", url: "https://zenodo.org/records/20760578", publication: true },
-    { name: "LeetCode", logo: "logos/leetcode.svg", description: "Data structures and algorithms", url: "https://leetcode.com/u/santiwari07/" },
-    { name: "Kaggle", logo: "logos/kaggle.png", description: "Machine learning profile", url: "https://www.kaggle.com/santiwari07" }
+    { name: "Devpost", logo: "logos/devpost.svg", url: "https://devpost.com/sanskartiwari-smt" },
+    { name: "Zenodo", logo: "logos/zenodo.svg", url: "https://zenodo.org/records/20760578", publication: true },
+    { name: "LeetCode", logo: "logos/leetcode.svg", url: "https://leetcode.com/u/santiwari07/" },
+    { name: "Kaggle", logo: "logos/kaggle.png", url: "https://www.kaggle.com/santiwari07" }
   ],
   socialProfiles: [
-    { name: "YouTube", logo: "logos/youtube.svg", description: "Engineering demos and project videos", url: "https://www.youtube.com/@santiwari07" },
-    { name: "Instagram", logo: "logos/instagram.svg", description: "Sanskar Makes Stuff", url: "https://www.instagram.com/sanskarmakesstuff/" }
+    { name: "YouTube", logo: "logos/youtube.svg", url: "https://www.youtube.com/@santiwari07" },
+    { name: "Instagram", logo: "logos/instagram.svg", url: "https://www.instagram.com/sanskarmakesstuff/" }
   ]
 };

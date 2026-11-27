@@ -3,14 +3,14 @@ const entities = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "
 const html = (value) => String(value).replace(/[&<>"']/g, (char) => entities[char]);
 
 function linkList(links) {
-  return '<ul class="link-list">' + links.map(({ name, description, url, logo }) => {
+  return '<ul class="link-list">' + links.map(({ name, url, logo }) => {
     const mark = logo
       ? '<span class="link-logo"><img src="' + asset + html(logo) +
         '" width="24" height="24" alt="" loading="lazy" decoding="async"></span>'
       : "";
     return '<li><a class="link-entry' + (logo ? ' link-entry--with-logo' : '') + '" href="' + html(url) + '">' +
-      mark + '<span class="link-copy"><span class="link-title">' + html(name) +
-      '</span><span class="link-description">' + html(description) + '</span></span></a></li>';
+      mark + '<span class="link-title">' + html(name) +
+      '</span></a></li>';
   }).join("") + '</ul>';
 }
 
@@ -53,7 +53,7 @@ export function renderCard(profile) {
     "<!doctype html>",
     '<html lang="en"><head><meta charset="utf-8">',
     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
-    '<meta name="theme-color" content="#10110f">',
+    '<meta name="theme-color" content="#0b0b0b">',
     "<title>" + html(title) + "</title>",
     '<meta name="description" content="' + html(description) + '">',
     '<meta name="robots" content="index, follow, max-image-preview:large">',
@@ -85,13 +85,13 @@ export function renderCard(profile) {
     '<p class="bio">' + html(biography) + '</p>',
     '<nav class="actions" aria-label="Primary actions"><a class="action action-primary" href="' +
       html(portfolioUrl) + '">Open profile</a><a class="action" href="' + asset +
-      'sanskar-tiwari.vcf" download>Save profile</a></nav>',
-    '<div class="profile-options"><details class="more-profiles"><summary class="action">Other profiles</summary><div class="profile-list">' +
+      'sanskar-tiwari.vcf" download>Save profile</a><a class="action" href="' +
+      html(showcaseUrl) + '">View projects</a></nav>',
+    '<section class="other-profiles" aria-labelledby="other-profiles-title"><h2 id="other-profiles-title">Other profiles</h2>' +
       linkList([
-        { name: "LinkedIn", description: "Professional network", url: linkedInUrl, logo: "logos/linkedin.svg" },
+        { name: "LinkedIn", url: linkedInUrl, logo: "logos/linkedin.svg" },
         ...professionalProfiles, ...engineeringProfiles, ...socialProfiles
-      ]) + '</div></details>',
-    '<a class="action" href="' + html(showcaseUrl) + '">View projects</a></div>',
+      ]) + '</section>',
     '<p class="education">' + html(school) + ' · Class of ' + html(graduation) + '</p>',
     '<details class="share-panel" id="share-panel"><summary>Share and contact</summary>',
     '<div class="share-content"><div class="share-tools">',
