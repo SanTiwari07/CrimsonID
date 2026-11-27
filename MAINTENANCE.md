@@ -10,9 +10,9 @@ Edit [profile.mjs](profile.mjs) to change the public identity. The build reads t
 | Education and location | `school`, `degree`, `graduation`, `city` | The expected year is current and the card displays only its public city. |
 | Contact and destinations | `email`, `portfolioUrl`, `showcaseUrl`, `linkedInUrl` | Verify the `mailto:` action, copy feedback, profile ownership and the vCard's email and portfolio URL. |
 | Primary achievement | `achievement` | Confirm the result and event with an official award listing or other primary record, and test the evidence link. |
-| Professional, technical and social profiles | `professionalProfiles`, `engineeringProfiles`, `socialProfiles` | Check each label, short description and canonical destination. Keep publication records marked as publications. |
+| Professional, technical and social profiles | `professionalProfiles`, `engineeringProfiles`, `socialProfiles` | Check each label, short description and canonical destination. Keep publication records marked as publications. Link a local brand asset with the optional `logo` field. |
 | Selected work | `projects` | Use a documented project, one sentence about the outcome, a direct project link, and a meaningful photo or screenshot with matching dimensions and alt text. |
-| Portrait and social share image | `portrait`, `socialPreview`, files in `assets/images/` | Keep responsive portrait sizes at the same aspect ratio. Supply the real size of the larger portrait. Keep the social image at 1200 × 630 pixels or update the rendered Open Graph size. |
+| Portrait and social share image | `portrait`, `socialPreview`, files in `assets/images/` | Supply the portrait file and its intrinsic dimensions. Check the square frame on phone and desktop. Keep the social image at 1200 × 630 pixels or update the rendered Open Graph size. |
 
 Before adding a résumé, verify the exact public file against the owner-approved current version and check that it omits private data. Keep credentials, private phone numbers, residential addresses and unpublished material out of the public build. Review source links and achievements when circumstances change rather than treating counts or old snapshots as authoritative.
 
@@ -22,13 +22,15 @@ The card uses authentic assets from Sanskar's [primary portfolio repository](htt
 
 | Card asset | Original source |
 | --- | --- |
-| `portrait-360.webp` and `portrait-720.webp` | `images/hero/portrait.webp`, resized for the card |
+| `profile.png` | Portrait supplied by Sanskar for the current card |
 | `pothole.webp` | `images/projects/ipds.webp` |
 | `acousticmirror.webp` | [`AcousticMirrorLens/docs/screenshots/04-left-wall-point.jpg`](https://github.com/SanTiwari07/AcousticMirrorLens/blob/main/docs/screenshots/04-left-wall-point.jpg) |
-| `social-preview.jpg` | Card-specific text and composition using the authentic portfolio portrait |
-| `favicon.svg` | Existing portfolio ST monogram in `favicon.svg` |
+| `social-preview.jpg` | Card-specific text and composition using the supplied portrait |
+| `favicon.svg` | Original olive ST mark based on the portfolio initials |
 
 Keep image paths in the profile relative to `assets/`. Optimize photos to WebP or AVIF, retain the subject's natural proportions, and include explicit dimensions and concise alt text. Check replacement images at both compact and high-density display sizes. Font files and their SIL Open Font License texts sit together under `assets/fonts/`. Preserve the matching license text for any redistributed replacement, and update the CSS uses in `assets/card.css`.
+
+Platform artwork is stored in `assets/logos/`. Follow the provenance in the [design system](DESIGN_SYSTEM.md) when updating an icon. The adjacent link text supplies the accessible name.
 
 ## Rebuild and validate
 

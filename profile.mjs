@@ -9,7 +9,7 @@ export default {
   degree: "Electronics & Telecommunication Engineering",
   graduation: "2028",
   city: "Pune, India",
-  biography: "I build systems that connect software, hardware and AI, from embedded computer vision to spatial computing.",
+  biography: "I build AI and embedded systems, from computer vision to spatial computing.",
   brandLine: "Designed with purpose. Built with precision.",
   email: "sanskartiwari.work07@gmail.com",
   canonicalUrl: "https://santiwari07.qzz.io/card",
@@ -17,11 +17,10 @@ export default {
   showcaseUrl: "https://santiwari07.github.io/",
   linkedInUrl: "https://www.linkedin.com/in/santiwari07/",
   portrait: {
-    small: "images/portrait-360.webp",
-    large: "images/portrait-720.webp",
-    width: 720,
-    height: 702,
-    alt: "Sanskar Tiwari"
+    src: "images/profile.png",
+    width: 180,
+    height: 180,
+    alt: "Portrait of Sanskar Tiwari"
   },
   socialPreview: "images/social-preview.jpg",
   achievement: {
@@ -32,8 +31,7 @@ export default {
   projects: [
     {
       name: "Intelligent Pothole Detection",
-      discipline: "Computer vision · Embedded systems",
-      summary: "Real-time pothole detection that pairs YOLOv8 with motion data from a dual-ESP32 prototype.",
+      summary: "Real-time pothole detection using YOLOv8 and two ESP32 boards.",
       url: "https://santiwari07.github.io/projects/pothole-detection/",
       image: "images/pothole.webp",
       alt: "Assembled dual-ESP32 pothole detection prototype",
@@ -42,8 +40,7 @@ export default {
     },
     {
       name: "AcousticMirror",
-      discipline: "Spatial computing · Acoustics",
-      summary: "A Snap Spectacles lens that visualizes speaker reflections and guides acoustic panel placement.",
+      summary: "A Snap Spectacles lens that shows where sound reflects and where to place acoustic panels.",
       url: "https://santiwari07.github.io/projects/acoustic-mirror/",
       image: "images/acousticmirror.webp",
       alt: "An acoustic reflection point on the left wall in the AcousticMirror Lens Studio preview",
@@ -52,16 +49,16 @@ export default {
     }
   ],
   professionalProfiles: [
-    { name: "GitHub", description: "Source code and open-source work", url: "https://github.com/SanTiwari07" }
+    { name: "GitHub", logo: "logos/github.svg", description: "Source code and open-source work", url: "https://github.com/SanTiwari07" }
   ],
   engineeringProfiles: [
-    { name: "Devpost", description: "Hackathon projects and prototypes", url: "https://devpost.com/sanskartiwari-smt" },
-    { name: "Zenodo", description: "Pothole detection research preprint", url: "https://zenodo.org/records/20760578", publication: true },
-    { name: "LeetCode", description: "Data structures and algorithms", url: "https://leetcode.com/u/santiwari07/" },
-    { name: "Kaggle", description: "Machine learning profile", url: "https://www.kaggle.com/santiwari07" }
+    { name: "Devpost", logo: "logos/devpost.svg", description: "Hackathon projects and prototypes", url: "https://devpost.com/sanskartiwari-smt" },
+    { name: "Zenodo", logo: "logos/zenodo.svg", description: "Pothole detection research preprint", url: "https://zenodo.org/records/20760578", publication: true },
+    { name: "LeetCode", logo: "logos/leetcode.svg", description: "Data structures and algorithms", url: "https://leetcode.com/u/santiwari07/" },
+    { name: "Kaggle", logo: "logos/kaggle.png", description: "Machine learning profile", url: "https://www.kaggle.com/santiwari07" }
   ],
   socialProfiles: [
-    { name: "YouTube", description: "Engineering demos and project videos", url: "https://www.youtube.com/@santiwari07" },
-    { name: "Instagram", description: "Sanskar Makes Stuff", url: "https://www.instagram.com/sanskarmakesstuff/" }
+    { name: "YouTube", logo: "logos/youtube.svg", description: "Engineering demos and project videos", url: "https://www.youtube.com/@santiwari07" },
+    { name: "Instagram", logo: "logos/instagram.svg", description: "Sanskar Makes Stuff", url: "https://www.instagram.com/sanskarmakesstuff/" }
   ]
 };

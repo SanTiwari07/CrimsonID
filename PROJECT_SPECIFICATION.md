@@ -2,9 +2,9 @@
 
 ## Visitor journey
 
-The visitor opens an HTTPS link from an NFC tap, QR scan or message. The initial phone screen presents a portrait, name, role, education, biography, recognition and the portfolio and contact actions. LinkedIn, email and sharing sit directly below. Two project previews demonstrate embedded computer vision and spatial computing. The directory groups professional connections, engineering profiles and public demonstrations. The desktop view uses an identity rail and a work and profiles column. Short landscape viewports place the portrait beside the introduction.
+The visitor opens an HTTPS link from an NFC tap, QR scan or message. The initial phone screen presents a portrait, name, role, education, biography, recognition and the portfolio and contact actions. The initial actions are Open portfolio and Save contact. Email and sharing sit in one disclosure. Two project previews demonstrate embedded computer vision and spatial computing. Profiles exposes LinkedIn and GitHub. More profiles contains the additional technical and social destinations. The desktop view uses an identity rail and a work and profiles column. The portrait sits beside the introduction across screen sizes.
 
-The visual direction is Precision Editorial. It uses the portfolio’s near-black backgrounds, racing-red accent, ST monogram and three established type families. The portrait is sourced from the primary portfolio. Project imagery shows the physical pothole rig and an actual Lens Studio preview of AcousticMirror. See [Design system](DESIGN_SYSTEM.md) for the concepts, token choices and design rationale.
+The Precision Editorial layout uses the portfolio dark backgrounds, ST initials and three established type families. The current skin uses worn olive accents, dark charcoal surfaces and local platform logos. Sanskar provided the portrait directly. Project imagery shows the physical pothole rig and an actual Lens Studio preview of AcousticMirror. See [Design system](DESIGN_SYSTEM.md) for the concepts, token choices and design rationale.
 
 ## Portfolio and source audit
 

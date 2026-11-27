@@ -1,6 +1,6 @@
 # Sanskar Tiwari — Digital Identity
 
-A mobile-first digital visiting card for NFC taps, QR scans and direct links. It presents Sanskar’s engineering identity, two selected projects, professional profiles and quick contact actions.
+A mobile-first digital visiting card for NFC taps, QR scans and direct links. The card opens with the supplied portrait and two quick actions, followed by two selected projects and professional profiles.
 
 The production candidate is `https://santiwari07.qzz.io/card`. The public URL currently serves the portfolio fallback. Preview the new card locally before integrating it with the portfolio.
 
@@ -29,7 +29,7 @@ Profile text, links, contact details and the canonical URL are maintained in `pr
 | --- | --- |
 | ![Chrome screenshot of the digital card on a phone-size viewport](screenshots/phone.png) | ![Chrome screenshot of the digital identity rail and project directory on a desktop-size viewport](screenshots/desktop.png) |
 
-[Share panel on a phone](screenshots/sharing-phone.png) · [Full-page screenshots](screenshots/viewports/) · [Responsive test report](RESPONSIVE_TEST_REPORT.md)
+[iPhone 16-sized first screen](screenshots/iphone-16.png) · [Expanded profiles on a phone](screenshots/directory-phone.png) · [Share panel on a phone](screenshots/sharing-phone.png) · [Full-page screenshots](screenshots/viewports/) · [Responsive test report](RESPONSIVE_TEST_REPORT.md)
 
 ## Documentation
 

@@ -20,11 +20,11 @@
 | Long-term maintainability | Straightforward linear template | Reusable project and link rows driven by profile data | More grid breakpoints and tile variants |
 | NFC suitability | Fast identity and actions | Fast identity and actions followed by examples of work | More decisions at first contact |
 
-**Selected direction — Precision Editorial.** On a phone, the portrait, name, professional role and contact route form the introduction. The portfolio’s red accents, condensed headings and dark surfaces carry the brand. The project showcase provides a precedent for thin dividers and a readable project index. The two-project selection pairs the physical Intelligent Pothole Detection System with AcousticMirror, a spatial audio visualization for Snap Spectacles. AcousticMirror’s third-place result provides the recognition line.
+**Original direction — Precision Editorial.** On a phone, the portrait, name, professional role and contact route form the introduction. The portfolio’s red accents, condensed headings and dark surfaces carry the brand. The project showcase provides a precedent for thin dividers and a readable project index. The two-project selection pairs the physical Intelligent Pothole Detection System with AcousticMirror, a spatial audio visualization for Snap Spectacles. AcousticMirror’s third-place result provides the recognition line.
 
 ## Portfolio foundations
 
-The primary portfolio defines the black base, charcoal surface, off-white type, gray copy and two reds. The engineering showcase uses the same font families with closely related colors, square edges and darker divider tokens. The card draws from both. [Primary portfolio stylesheet](https://github.com/SanTiwari07/Portfolio/blob/9ae418528acdcd7cca4f13e9ce1fda19e7b239f5/src/index.css) · [Engineering showcase stylesheet](https://github.com/SanTiwari07/SanTiwari07.github.io/blob/4aa0ef85c9e31cef397c98c07b2140fa8daf819b/assets/style.css)
+The primary portfolio defines the black base, charcoal surface, off-white type, gray copy and two reds. The engineering showcase uses the same font families with closely related colors, square edges and darker divider tokens. The first release drew from both. [Primary portfolio stylesheet](https://github.com/SanTiwari07/Portfolio/blob/9ae418528acdcd7cca4f13e9ce1fda19e7b239f5/portfolio/src/index.css) · [Engineering showcase stylesheet](https://github.com/SanTiwari07/SanTiwari07.github.io/blob/4aa0ef85c9e31cef397c98c07b2140fa8daf819b/assets/style.css)
 
 | Role | Foundation | Application |
 | --- | --- | --- |
@@ -38,6 +38,23 @@ The primary portfolio defines the black base, charcoal surface, off-white type, 
 
 Foundation contrast ratios are 18.92:1 for off-white on the canvas, 5.58:1 for source gray on the surface and 7.72:1 for lighter gray on the surface. Bright red on the surface gives 5.64:1, and dark text on bright red gives 5.87:1. Off-white on the base red gives 4.19:1, below the 4.5:1 AA threshold for regular text. Check the rendered text and focus states after CSS changes. [W3C contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)
 
+## Current direction
+
+The current card uses charcoal, worn olive and off-white. Cinematographer Jeff Cronenweth describes the film’s desaturated palette, practical lighting and willingness to let parts of the frame go dark. The card takes those cues into muted surfaces, bright type and a small hatched edge on the photograph. Sanskar supplied the portrait directly. [American Society of Cinematographers](https://theasc.com/article/flashback-fight-club/) · [Cooke Optics interview](https://www.youtube.com/watch?v=GFqODinvros)
+
+| Role | Token | Use |
+| --- | --- | --- |
+| Canvas | `#10110F` | Main background |
+| Surface | `#191B16` | Cards, secondary actions and logo tiles |
+| Foreground | `#EEECE2` | Headings and body text |
+| Muted | `#B3B5A9` | Descriptions and supporting details |
+| Accent | `#C2C5AE` | Main action and restrained rules |
+| CTA ink | `#181A13` | Text on the main action |
+
+The phone opens with identity, role and two actions. Projects come next, followed by LinkedIn and GitHub. The remaining engineering and social links sit under More profiles. Contact and QR controls share one disclosure. This order applies Apple’s guidance on hierarchy and comfortable touch area. [Apple design principles](https://developer.apple.com/design/human-interface-guidelines/design-principles/) · [Apple button guidance](https://developer.apple.com/design/human-interface-guidelines/buttons)
+
+The white Zenodo wordmark and legacy Kaggle monogram come from first-party assets. GitHub, Devpost, LeetCode, YouTube and Instagram use Simple Icons 16.0.0 artwork. LinkedIn uses the [in] artwork from Simple Icons 11.15.0. Every mark sits beside the platform name. [Zenodo](https://about.zenodo.org/) · [Kaggle](https://www.kaggle.com/static/images/favicon.ico) · [Simple Icons 16.0.0](https://github.com/simple-icons/simple-icons/tree/16.0.0/icons) · [LinkedIn mark](https://github.com/simple-icons/simple-icons/blob/11.15.0/icons/linkedin.svg)
+
 ## Type and spacing
 
 | Use | Family | Treatment |
@@ -50,13 +67,13 @@ Self-host the required WOFF2 files with a system fallback and `font-display: swa
 
 ## Composition and behavior
 
-- Start with a single-column phone layout. A compact masthead leads to the portrait, identity, short biography and verified recognition. Put Explore Portfolio and Save Contact immediately below, with LinkedIn and Email Me alongside or directly beneath as space allows.
+- Start with a single-column phone layout. A compact masthead leads to the portrait, identity, short biography and verified recognition. Put Open Portfolio and Save Contact immediately below. LinkedIn appears in Profiles and email appears under Share and contact.
 - Keep share and QR controls close to the identity through a masthead link to the contact and sharing area. Use inline disclosure to keep the first view compact. Give copy and fallback feedback in a screen-reader-announced status region.
 - Show selected work using a title, one-line explanation and an authentic thumbnail when available. Use editorial rows for the professional, engineering and building-in-public destinations. Put platform names in the visible link text.
 - Preserve DOM order through layout changes. Move to two columns once both areas have enough width. Wide screens use a bounded composition with the identity at left and projects and directories at right.
 - Keep content in the normal reading flow on short landscape screens. Respect safe-area insets and allow browser zoom and text enlargement. [W3C reflow guidance](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
 - Prefer 48 × 48 CSS-pixel touch targets for standalone actions, with a visible keyboard outline and pressed feedback. Keep hover effects supplementary. [W3C target-size guidance](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
-- Use the primary portfolio’s photographic portrait, an Intelligent Pothole Detection System hardware photograph and an AcousticMirror Lens Studio screenshot. Reserve image dimensions, prioritize the portrait and lazy-load below-fold project assets. Retain the existing ST favicon and carry its lettering into the masthead. [Portfolio portrait source](https://github.com/SanTiwari07/Portfolio/blob/9ae418528acdcd7cca4f13e9ce1fda19e7b239f5/public/images/hero/portrait.webp)
+- Use the supplied portrait, the pothole rig photograph and the AcousticMirror Lens Studio screenshot. Reserve image dimensions, prioritize the portrait and lazy-load below-fold project assets. Use the ST initials in the favicon and masthead.
 - Keep movement brief and tied to interaction. Present the identity and action links at first paint. Respect `prefers-reduced-motion`.
 
 ## Review checklist

@@ -12,14 +12,14 @@
 | --- | --- |
 | Production build | Passed on Node 26.13.0 and npm 11.20.0. A clean snapshot also passed dependency installation, build and preview. |
 | Static card route and assets | The local `/card` responds with the identity page. CSS, JavaScript, fonts, photos, social preview, QR files and vCard were served locally. |
-| Essential actions | Portfolio and LinkedIn point to the intended URLs. Email uses the approved `mailto:` address. Opening the device mail app and sending an email remain physical checks. |
+| Essential actions | Open portfolio, LinkedIn and all eight profile destinations point to their intended URLs. Email uses the approved `mailto:` address. Opening the device mail app and sending an email remain physical checks. |
 | Clipboard | Native clipboard wrote and read back the exact email and URL. Independent browser tests covered the legacy copy path, plus manual text selection when both clipboard mechanisms were denied. |
 | Web Share | In independent browser tests, simulated success sent the canonical URL and title, simulated rejection fell back to copying the URL, and cancel left the status quiet. Browsers without the API offered copy and QR downloads. An operating-system share sheet remains a device test. |
 | vCard | Downloaded as `sanskar-tiwari.vcf` with `text/vcard; charset=utf-8` and an attachment filename. Verified vCard 3.0, CRLF, UTF-8 text, escaped values, 75-octet line folding, required name fields, professional email, portfolio URL and omitted telephone. Real Contacts import remains pending. |
 | QR | OpenCV decoded the PNG and browser-rendered SVG to `https://santiwari07.qzz.io/card`. The 144 × 144 PNG and SVG checks also decoded successfully. Both exports use a four-module quiet zone and error correction M. |
 | Script disabled | Portfolio, vCard, mail link, selectable text, native disclosure and downloadable SVG remained available. |
 | Failed media | Aborted portrait and project image requests in Chrome. The photo slots retained their geometry, and the identity and actions remained accessible. |
-| Console and layout | No console or page errors on the normal runs. All 18 Chrome viewport checks passed. See the [responsive matrix](RESPONSIVE_TEST_REPORT.md). |
+| Console and layout | No console or page errors on the normal runs. All 21 Chrome viewport checks passed, including 402 × 874. See the [responsive matrix](RESPONSIVE_TEST_REPORT.md). |
 | Metadata | Static HTML contains the canonical URL, title, description, profile social preview, favicon, crawlable destination links and Person/ProfilePage data. The social image is 1200 × 630. |
 
 ## Public destination checks
@@ -42,12 +42,12 @@ Lighthouse 13.6.0 used headless Chrome 158 on Windows at the local route. Mobile
 | SEO | 100 / 100 |
 | First Contentful Paint | 0.75 s |
 | Largest Contentful Paint | 0.75 s |
-| Cumulative Layout Shift | 0.00024 |
+| Cumulative Layout Shift | 0.00025 |
 | Total Blocking Time | 0 ms |
-| Audit transfer | 206 KiB |
+| Audit transfer | 228 KiB |
 | Browser JavaScript | 2.21 KiB raw, 0.89 KiB gzip |
 
-A separate Chrome Event Timing run used the 390 × 844 touch viewport, 4× CPU throttling and a 150 ms / 1.6 Mbps network simulation. Twelve disclosure and clipboard interactions recorded a longest candidate duration of **48 ms**. Production field INP requires visits to a deployed page.
+A separate Chrome Event Timing run used the 390 × 844 touch viewport, 4× CPU throttling and a 150 ms / 1.6 Mbps network simulation. Twelve disclosure and clipboard interactions recorded a longest candidate duration of **32 ms**. Production field INP requires visits to a deployed page.
 
 [Interactive Lighthouse report](reports/lighthouse-mobile.report.html) · [Lighthouse JSON](reports/lighthouse-mobile.report.json)
 

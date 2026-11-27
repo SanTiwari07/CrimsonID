@@ -4,7 +4,7 @@ The proposed address is `https://santiwari07.qzz.io/card`. The tag stores this o
 
 ## Verify the destination before writing
 
-The current public `/card` route serves the main portfolio’s SPA fallback. An HTTPS 200 alone cannot distinguish the SPA from the identity card. After the approved deployment, open the exact address in a private tab and confirm it shows the dedicated visiting card with **Explore Portfolio** and **Save Contact**. Verify the vCard and QR assets on that deployment, and repeat over both Wi-Fi and mobile data. Confirm access to the DigitalPlat account for `santiwari07.qzz.io` and check its current renewal requirements. Keep the NFC tag writable while checking the URL and hardware. [Deployment guide](DEPLOYMENT.md) · [DigitalPlat terms](https://domain.digitalplat.org/terms-of-service/)
+The current public `/card` route serves the main portfolio’s SPA fallback. An HTTPS 200 alone cannot distinguish the SPA from the identity card. After the approved deployment, open the exact address in a private tab and confirm it shows the dedicated visiting card with **Open Portfolio** and **Save Contact**. Verify the vCard and QR assets on that deployment, and repeat over both Wi-Fi and mobile data. Confirm access to the DigitalPlat account for `santiwari07.qzz.io` and check its current renewal requirements. Keep the NFC tag writable while checking the URL and hardware. [Deployment guide](DEPLOYMENT.md) · [DigitalPlat terms](https://domain.digitalplat.org/terms-of-service/)
 
 ## Identify the tag and check that it is writable
 
@@ -30,7 +30,7 @@ On an iPhone with background tag reading, wake and unlock the device, close Came
 | Step | Pass condition |
 | --- | --- |
 | Tap and open | The OS detects the tag, and the link opens the correct public identity page without an account. |
-| Read and explore | The phone shows the name, role and first actions. Explore Portfolio opens the primary portfolio. |
+| Read and explore | The phone shows the name, role and first actions. Open Portfolio opens the primary portfolio. |
 | Save contact | The browser opens a contact preview or downloads `sanskar-tiwari.vcf`. Import it and verify the saved name, professional email and primary portfolio URL in Contacts. |
 | Share | Share the card to another device and open the received URL. Test Copy Link separately when native sharing is unavailable. |
 | Scan QR | Open the mobile camera on the receiving device. Scan both the on-screen code and a proof print and compare the decoded URL with the NFC record. |
