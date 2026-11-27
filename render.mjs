@@ -14,24 +14,15 @@ function linkList(links) {
   }).join("") + '</ul>';
 }
 
-function projectCard(project) {
-  return '<li><a class="project" href="' + html(project.url) + '">' +
-    '<span class="project-photo"><img src="' + asset + html(project.image) + '" alt="' +
-      html(project.alt) + '" width="' + project.width + '" height="' + project.height + '" loading="lazy" decoding="async"></span>' +
-    '<span class="project-copy">' +
-      '<span class="project-title">' + html(project.name) +
-      '</span><span class="project-summary">' + html(project.summary) + '</span></span></a></li>';
-}
-
 export function renderCard(profile) {
   const {
-    name, monogram, username, role, school, graduation, city, biography, brandLine, email,
-    canonicalUrl, portfolioUrl, showcaseUrl, linkedInUrl, portrait, socialPreview, achievement,
-    projects, professionalProfiles, engineeringProfiles, socialProfiles
+    name, monogram, username, role, school, graduation, city, biography, email,
+    canonicalUrl, portfolioUrl, showcaseUrl, linkedInUrl, portrait, socialPreview,
+    professionalProfiles, engineeringProfiles, socialProfiles
   } = profile;
 
   const title = name + " — Digital Identity";
-  const description = role + " based in " + city + ". Explore my engineering work, connect or save my contact.";
+  const description = role + " based in " + city + ". Open my profile, save my contact or find me on other platforms.";
   const preview = new URL(asset + socialPreview, canonicalUrl).href;
   const person = {
     "@type": "Person",
@@ -82,8 +73,7 @@ export function renderCard(profile) {
     '<script src="' + asset + 'card.js" defer></script>',
     '</head><body><a class="skip" href="#main">Skip to main content</a>',
     '<div class="frame"><header class="masthead"><div class="brand"><span class="brand-mark" aria-hidden="true">' +
-      html(monogram) + '</span><span>Digital Identity</span></div>' +
-      '<a href="#share-panel" class="masthead-share">Share card</a></header>',
+      html(monogram) + '</span><span>Digital Identity</span></div></header>',
     '<main id="main" class="layout">',
     '<section class="identity" aria-labelledby="identity-name">',
     '<div class="identity-lead"><div><p class="handle">@' + html(username) + '</p>' +
@@ -94,11 +84,15 @@ export function renderCard(profile) {
     '<p class="role">' + html(role) + '</p>',
     '<p class="bio">' + html(biography) + '</p>',
     '<nav class="actions" aria-label="Primary actions"><a class="action action-primary" href="' +
-      html(portfolioUrl) + '">Open portfolio</a><a class="action" href="' + asset +
-      'sanskar-tiwari.vcf" download>Save contact</a></nav>',
+      html(portfolioUrl) + '">Open profile</a><a class="action" href="' + asset +
+      'sanskar-tiwari.vcf" download>Save profile</a></nav>',
+    '<div class="profile-options"><details class="more-profiles"><summary class="action">Other profiles</summary><div class="profile-list">' +
+      linkList([
+        { name: "LinkedIn", description: "Professional network", url: linkedInUrl, logo: "logos/linkedin.svg" },
+        ...professionalProfiles, ...engineeringProfiles, ...socialProfiles
+      ]) + '</div></details>',
+    '<a class="action" href="' + html(showcaseUrl) + '">View projects</a></div>',
     '<p class="education">' + html(school) + ' · Class of ' + html(graduation) + '</p>',
-    '<a class="achievement" href="' + html(achievement.url) + '"><strong>' + html(achievement.rank) +
-      '</strong><span>' + html(achievement.event) + '</span></a>',
     '<details class="share-panel" id="share-panel"><summary>Share and contact</summary>',
     '<div class="share-content"><div class="share-tools">',
     '<div class="share-buttons"><a class="action" href="mailto:' + html(email) + '">Email me</a><button class="action" id="native-share" type="button" hidden>Share digital card</button>' +
@@ -109,21 +103,7 @@ export function renderCard(profile) {
     '<p id="action-status" class="action-status" role="status"></p></div>',
     '<div class="share-qr"><img src="' + asset + 'card-qr.svg" width="168" height="168" loading="lazy" alt="QR code for the digital identity card">' +
       '<div class="downloads"><a href="' + asset + 'card-qr.png" download>Download PNG</a>' +
-      '<a href="' + asset + 'card-qr.svg" download>Download SVG</a></div></div></div></details></section>',
-    '<div class="content"><section class="work" aria-labelledby="work-title"><div class="section-head">' +
-      '<h2 id="work-title">Selected work</h2><a class="section-link" href="' +
-      html(showcaseUrl) + '">All projects</a></div><ul class="projects">' + projects.map(projectCard).join("") +
-      '</ul></section>',
-    '<section class="profiles" aria-labelledby="profiles-title"><div class="section-head"><h2 id="profiles-title">Profiles</h2></div>' +
-      linkList([
-        { name: "LinkedIn", description: "Professional network", url: linkedInUrl, logo: "logos/linkedin.svg" },
-        ...professionalProfiles
-      ]) +
-      '<details class="more-profiles"><summary>More profiles</summary><div class="more-profile-groups">' +
-        '<div><h3>Engineering &amp; research</h3>' + linkList(engineeringProfiles) + '</div>' +
-        '<div><h3>Building in public</h3>' + linkList(socialProfiles) + '</div>' +
-      '</div></details></section></div></main>',
-    '<footer class="footer"><div><strong>' + html(name) + '</strong><span>' + html(city) +
-      '</span></div><p>' + html(brandLine) + '</p></footer></div></body></html>'
+      '<a href="' + asset + 'card-qr.svg" download>Download SVG</a></div></div></div></details></section></main>',
+    '<footer class="footer">' + html(city) + '</footer></div></body></html>'
   ].join("\n");
 }

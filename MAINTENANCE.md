@@ -9,12 +9,10 @@ Edit [profile.mjs](profile.mjs) to change the public identity. The build reads t
 | Name, role and bio | `name`, `givenName`, `familyName`, `role`, `biography`, `username` | The first mobile screen introduces the person clearly. Check structured data and the downloaded contact name. |
 | Education and location | `school`, `degree`, `graduation`, `city` | The expected year is current and the card displays only its public city. |
 | Contact and destinations | `email`, `portfolioUrl`, `showcaseUrl`, `linkedInUrl` | Verify the `mailto:` action, copy feedback, profile ownership and the vCard's email and portfolio URL. |
-| Primary achievement | `achievement` | Confirm the result and event with an official award listing or other primary record, and test the evidence link. |
 | Professional, technical and social profiles | `professionalProfiles`, `engineeringProfiles`, `socialProfiles` | Check each label, short description and canonical destination. Keep publication records marked as publications. Link a local brand asset with the optional `logo` field. |
-| Selected work | `projects` | Use a documented project, one sentence about the outcome, a direct project link, and a meaningful photo or screenshot with matching dimensions and alt text. |
 | Portrait and social share image | `portrait`, `socialPreview`, files in `assets/images/` | Supply the portrait file and its intrinsic dimensions. Check the square frame on phone and desktop. Keep the social image at 1200 × 630 pixels or update the rendered Open Graph size. |
 
-Before adding a résumé, verify the exact public file against the owner-approved current version and check that it omits private data. Keep credentials, private phone numbers, residential addresses and unpublished material out of the public build. Review source links and achievements when circumstances change rather than treating counts or old snapshots as authoritative.
+Before adding a résumé, verify the exact public file against the owner-approved current version and check that it omits private data. Keep credentials, private phone numbers, residential addresses and unpublished material out of the public build. Review source links when circumstances change.
 
 ## Replace an image or font
 
@@ -23,8 +21,6 @@ The card uses authentic assets from Sanskar's [primary portfolio repository](htt
 | Card asset | Original source |
 | --- | --- |
 | `profile.png` | Portrait supplied by Sanskar for the current card |
-| `pothole.webp` | `images/projects/ipds.webp` |
-| `acousticmirror.webp` | [`AcousticMirrorLens/docs/screenshots/04-left-wall-point.jpg`](https://github.com/SanTiwari07/AcousticMirrorLens/blob/main/docs/screenshots/04-left-wall-point.jpg) |
 | `social-preview.jpg` | Card-specific text and composition using the supplied portrait |
 | `favicon.svg` | Original olive ST mark based on the portfolio initials |
 

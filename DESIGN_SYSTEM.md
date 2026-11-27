@@ -20,7 +20,7 @@
 | Long-term maintainability | Straightforward linear template | Reusable project and link rows driven by profile data | More grid breakpoints and tile variants |
 | NFC suitability | Fast identity and actions | Fast identity and actions followed by examples of work | More decisions at first contact |
 
-**Original direction — Precision Editorial.** On a phone, the portrait, name, professional role and contact route form the introduction. The portfolio’s red accents, condensed headings and dark surfaces carry the brand. The project showcase provides a precedent for thin dividers and a readable project index. The two-project selection pairs the physical Intelligent Pothole Detection System with AcousticMirror, a spatial audio visualization for Snap Spectacles. AcousticMirror’s third-place result provides the recognition line.
+**Original direction — Precision Editorial.** On a phone, the portrait, name, professional role and contact route form the introduction. The portfolio’s red accents, condensed headings and dark surfaces carry the brand. The project showcase provides a precedent for thin dividers and a readable project index.
 
 ## Portfolio foundations
 
@@ -51,7 +51,7 @@ The current card uses charcoal, worn olive and off-white. Cinematographer Jeff C
 | Accent | `#C2C5AE` | Main action and restrained rules |
 | CTA ink | `#181A13` | Text on the main action |
 
-The phone opens with identity, role and two actions. Projects come next, followed by LinkedIn and GitHub. The remaining engineering and social links sit under More profiles. Contact and QR controls share one disclosure. This order applies Apple’s guidance on hierarchy and comfortable touch area. [Apple design principles](https://developer.apple.com/design/human-interface-guidelines/design-principles/) · [Apple button guidance](https://developer.apple.com/design/human-interface-guidelines/buttons)
+The phone opens with identity, role and two primary actions. Other profiles opens the platform directory, and View projects takes visitors to the engineering showcase. Contact and QR controls share a separate disclosure. This order applies Apple’s guidance on hierarchy and comfortable touch area. [Apple design principles](https://developer.apple.com/design/human-interface-guidelines/design-principles/) · [Apple button guidance](https://developer.apple.com/design/human-interface-guidelines/buttons)
 
 The white Zenodo wordmark and legacy Kaggle monogram come from first-party assets. GitHub, Devpost, LeetCode, YouTube and Instagram use Simple Icons 16.0.0 artwork. LinkedIn uses the [in] artwork from Simple Icons 11.15.0. Every mark sits beside the platform name. [Zenodo](https://about.zenodo.org/) · [Kaggle](https://www.kaggle.com/static/images/favicon.ico) · [Simple Icons 16.0.0](https://github.com/simple-icons/simple-icons/tree/16.0.0/icons) · [LinkedIn mark](https://github.com/simple-icons/simple-icons/blob/11.15.0/icons/linkedin.svg)
 
@@ -67,13 +67,13 @@ Self-host the required WOFF2 files with a system fallback and `font-display: swa
 
 ## Composition and behavior
 
-- Start with a single-column phone layout. A compact masthead leads to the portrait, identity, short biography and verified recognition. Put Open Portfolio and Save Contact immediately below. LinkedIn appears in Profiles and email appears under Share and contact.
-- Keep share and QR controls close to the identity through a masthead link to the contact and sharing area. Use inline disclosure to keep the first view compact. Give copy and fallback feedback in a screen-reader-announced status region.
-- Show selected work using a title, one-line explanation and an authentic thumbnail when available. Use editorial rows for the professional, engineering and building-in-public destinations. Put platform names in the visible link text.
-- Preserve DOM order through layout changes. Move to two columns once both areas have enough width. Wide screens use a bounded composition with the identity at left and projects and directories at right.
+- Start with a single-column phone layout. A compact masthead leads to the portrait, identity and short biography. Put Open profile and Save profile immediately below, followed by Other profiles and View projects.
+- Keep share and QR controls close to the identity in a separate disclosure. Use inline disclosure to keep the first view compact. Give copy and fallback feedback in a screen-reader-announced status region.
+- Show project work through one link to the engineering showcase. Put recognizable platform names in the Other profiles disclosure.
+- Preserve DOM order through layout changes. Keep a single centered column on wide screens.
 - Keep content in the normal reading flow on short landscape screens. Respect safe-area insets and allow browser zoom and text enlargement. [W3C reflow guidance](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)
 - Prefer 48 × 48 CSS-pixel touch targets for standalone actions, with a visible keyboard outline and pressed feedback. Keep hover effects supplementary. [W3C target-size guidance](https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html)
-- Use the supplied portrait, the pothole rig photograph and the AcousticMirror Lens Studio screenshot. Reserve image dimensions, prioritize the portrait and lazy-load below-fold project assets. Use the ST initials in the favicon and masthead.
+- Use the supplied portrait. Reserve its dimensions and prioritize it on the first view. Use the ST initials in the favicon and masthead.
 - Keep movement brief and tied to interaction. Present the identity and action links at first paint. Respect `prefers-reduced-motion`.
 
 ## Review checklist
@@ -81,5 +81,5 @@ Self-host the required WOFF2 files with a system fallback and `font-display: swa
 - The first view establishes the person and presents the portfolio and contact paths.
 - The portrait stays legible and undistorted at every reference width.
 - Actions remain readable and tappable with enlarged text, and keyboard focus is visible across sections.
-- Project and directory rows keep aligned spacing and avoid clipping or horizontal overflow.
+- Profile rows keep aligned spacing and avoid clipping or horizontal overflow.
 - Tablet and desktop layouts retain the phone reading order while using the available width.

@@ -12,7 +12,7 @@
 | --- | --- |
 | Production build | Passed on Node 26.13.0 and npm 11.20.0. A clean snapshot also passed dependency installation, build and preview. |
 | Static card route and assets | The local `/card` responds with the identity page. CSS, JavaScript, fonts, photos, social preview, QR files and vCard were served locally. |
-| Essential actions | Open portfolio, LinkedIn and all eight profile destinations point to their intended URLs. Email uses the approved `mailto:` address. Opening the device mail app and sending an email remain physical checks. |
+| Essential actions | Open profile leads to the primary portfolio, View projects leads to the engineering showcase, and the eight destinations open from Other profiles. Email uses the approved `mailto:` address. Opening the device mail app and sending an email remain physical checks. |
 | Clipboard | Native clipboard wrote and read back the exact email and URL. Independent browser tests covered the legacy copy path, plus manual text selection when both clipboard mechanisms were denied. |
 | Web Share | In independent browser tests, simulated success sent the canonical URL and title, simulated rejection fell back to copying the URL, and cancel left the status quiet. Browsers without the API offered copy and QR downloads. An operating-system share sheet remains a device test. |
 | vCard | Downloaded as `sanskar-tiwari.vcf` with `text/vcard; charset=utf-8` and an attachment filename. Verified vCard 3.0, CRLF, UTF-8 text, escaped values, 75-octet line folding, required name fields, professional email, portfolio URL and omitted telephone. Real Contacts import remains pending. |
@@ -44,8 +44,8 @@ Lighthouse 13.6.0 used headless Chrome 158 on Windows at the local route. Mobile
 | Largest Contentful Paint | 0.75 s |
 | Cumulative Layout Shift | 0.00025 |
 | Total Blocking Time | 0 ms |
-| Audit transfer | 228 KiB |
-| Browser JavaScript | 2.21 KiB raw, 0.89 KiB gzip |
+| Audit transfer | 173 KiB |
+| Browser JavaScript | 1.83 KiB raw, 0.77 KiB gzip |
 
 A separate Chrome Event Timing run used the 390 × 844 touch viewport, 4× CPU throttling and a 150 ms / 1.6 Mbps network simulation. Twelve disclosure and clipboard interactions recorded a longest candidate duration of **32 ms**. Production field INP requires visits to a deployed page.
 
@@ -53,6 +53,6 @@ A separate Chrome Event Timing run used the 390 × 844 touch viewport, 4× CPU t
 
 ## Accessibility and release checks
 
-Axe returned zero violations at 390 × 844 and 1440 × 900 with the share panel visible. Keyboard skip and disclosure, reduced motion, text-spacing overrides and 200% text reflow passed the browser checks. All tested visible primary and sharing controls met the 48 CSS pixel target.
+Axe returned zero violations at 402 × 874 and 1440 × 900 with Other profiles expanded. Tested primary actions met the 48 CSS pixel target.
 
 Physical NFC tap and readback, camera QR scanning, iOS and Android contact import, OS sharing, and named mobile app-browser coverage remain pending. Production HTTPS verification and tag programming are covered in [NFC setup](NFC_SETUP.md).

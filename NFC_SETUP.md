@@ -4,7 +4,7 @@ The proposed address is `https://santiwari07.qzz.io/card`. The tag stores this o
 
 ## Verify the destination before writing
 
-The current public `/card` route serves the main portfolio’s SPA fallback. An HTTPS 200 alone cannot distinguish the SPA from the identity card. After the approved deployment, open the exact address in a private tab and confirm it shows the dedicated visiting card with **Open Portfolio** and **Save Contact**. Verify the vCard and QR assets on that deployment, and repeat over both Wi-Fi and mobile data. Confirm access to the DigitalPlat account for `santiwari07.qzz.io` and check its current renewal requirements. Keep the NFC tag writable while checking the URL and hardware. [Deployment guide](DEPLOYMENT.md) · [DigitalPlat terms](https://domain.digitalplat.org/terms-of-service/)
+The current public `/card` route serves the main portfolio’s SPA fallback. An HTTPS 200 alone cannot distinguish the SPA from the identity card. After the approved deployment, open the exact address in a private tab and confirm it shows the dedicated visiting card with **Open profile** and **Save profile**. Verify the vCard and QR assets on that deployment, and repeat over both Wi-Fi and mobile data. Confirm access to the DigitalPlat account for `santiwari07.qzz.io` and check its current renewal requirements. Keep the NFC tag writable while checking the URL and hardware. [Deployment guide](DEPLOYMENT.md) · [DigitalPlat terms](https://domain.digitalplat.org/terms-of-service/)
 
 ## Identify the tag and check that it is writable
 
@@ -30,7 +30,7 @@ On an iPhone with background tag reading, wake and unlock the device, close Came
 | Step | Pass condition |
 | --- | --- |
 | Tap and open | The OS detects the tag, and the link opens the correct public identity page without an account. |
-| Read and explore | The phone shows the name, role and first actions. Open Portfolio opens the primary portfolio. |
+| Read and explore | The phone shows the name, role and first actions. Open profile opens the primary portfolio. |
 | Save contact | The browser opens a contact preview or downloads `sanskar-tiwari.vcf`. Import it and verify the saved name, professional email and primary portfolio URL in Contacts. |
 | Share | Share the card to another device and open the received URL. Test Copy Link separately when native sharing is unavailable. |
 | Scan QR | Open the mobile camera on the receiving device. Scan both the on-screen code and a proof print and compare the decoded URL with the NFC record. |
@@ -40,7 +40,7 @@ On an iPhone with background tag reading, wake and unlock the device, close Came
 
 ### Contact file handling
 
-The **Save Contact** link serves a UTF-8 vCard 3.0. On Android, use the contact prompt if one appears. If the browser saves it to Downloads, open the file there or import it through the Contacts app and select the account where the contact belongs. On iPhone or iPad, use the contact preview where available. If the browser offers a downloaded file and the preview does not import it, send the file to yourself and tap the `.vcf` attachment in Mail or Messages. These options reflect platform guidance, with the deployed browser-to-Contacts handoff still pending device testing. [vCard 3.0 specification](https://www.rfc-editor.org/rfc/rfc2426.html) · [Google Contacts for Android](https://support.google.com/contacts/answer/15147365?co=GENIE.Platform%3DAndroid) · [Import contacts on iPhone](https://support.apple.com/en-gb/guide/iphone/iph356499f31/ios) · [Import contacts on iPad](https://support.apple.com/en-asia/guide/ipad/ipad3e95b18b/ipados)
+The **Save profile** link serves a UTF-8 vCard 3.0. On Android, use the contact prompt if one appears. If the browser saves it to Downloads, open the file there or import it through the Contacts app and select the account where the contact belongs. On iPhone or iPad, use the contact preview where available. If the browser offers a downloaded file and the preview does not import it, send the file to yourself and tap the `.vcf` attachment in Mail or Messages. These options reflect platform guidance, with the deployed browser-to-Contacts handoff still pending device testing. [vCard 3.0 specification](https://www.rfc-editor.org/rfc/rfc2426.html) · [Google Contacts for Android](https://support.google.com/contacts/answer/15147365?co=GENIE.Platform%3DAndroid) · [Import contacts on iPhone](https://support.apple.com/en-gb/guide/iphone/iph356499f31/ios) · [Import contacts on iPad](https://support.apple.com/en-asia/guide/ipad/ipad3e95b18b/ipados)
 
 ## Prepare the QR fallback
 

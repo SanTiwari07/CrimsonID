@@ -1,14 +1,4 @@
-const sharePanel = document.getElementById("share-panel");
-const shareLink = document.querySelector(".masthead-share");
 const statusMessage = document.getElementById("action-status");
-
-shareLink.addEventListener("click", (event) => {
-  event.preventDefault();
-  sharePanel.open = true;
-  const summary = sharePanel.querySelector("summary");
-  summary.focus({ preventScroll: true });
-  summary.scrollIntoView({ block: "nearest" });
-});
 
 async function copyField(field, label) {
   try {
@@ -59,7 +49,7 @@ if (typeof navigator.share === "function" && (typeof navigator.canShare !== "fun
   });
 }
 
-document.querySelectorAll(".portrait img, .project-photo img").forEach((image) => {
+document.querySelectorAll(".portrait img").forEach((image) => {
   const hideBrokenImage = () => image.classList.add("image-unavailable");
   image.addEventListener("error", hideBrokenImage, { once: true });
   if (image.complete && image.naturalWidth === 0) hideBrokenImage();

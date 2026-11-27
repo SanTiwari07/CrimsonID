@@ -10,7 +10,6 @@ export default {
   graduation: "2028",
   city: "Pune, India",
   biography: "I build AI and embedded systems, from computer vision to spatial computing.",
-  brandLine: "Designed with purpose. Built with precision.",
   email: "sanskartiwari.work07@gmail.com",
   canonicalUrl: "https://santiwari07.qzz.io/card",
   portfolioUrl: "https://santiwari07.qzz.io/",
@@ -23,31 +22,6 @@ export default {
     alt: "Portrait of Sanskar Tiwari"
   },
   socialPreview: "images/social-preview.jpg",
-  achievement: {
-    rank: "3rd place",
-    event: "Learn AR with SPECS",
-    url: "https://learn-specs-10-26.devpost.com/project-gallery"
-  },
-  projects: [
-    {
-      name: "Intelligent Pothole Detection",
-      summary: "Real-time pothole detection using YOLOv8 and two ESP32 boards.",
-      url: "https://santiwari07.github.io/projects/pothole-detection/",
-      image: "images/pothole.webp",
-      alt: "Assembled dual-ESP32 pothole detection prototype",
-      width: 720,
-      height: 450
-    },
-    {
-      name: "AcousticMirror",
-      summary: "A Snap Spectacles lens that shows where sound reflects and where to place acoustic panels.",
-      url: "https://santiwari07.github.io/projects/acoustic-mirror/",
-      image: "images/acousticmirror.webp",
-      alt: "An acoustic reflection point on the left wall in the AcousticMirror Lens Studio preview",
-      width: 720,
-      height: 450
-    }
-  ],
   professionalProfiles: [
     { name: "GitHub", logo: "logos/github.svg", description: "Source code and open-source work", url: "https://github.com/SanTiwari07" }
   ],

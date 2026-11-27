@@ -8,7 +8,7 @@
 
 ## Chrome viewport matrix
 
-Chrome 158.0.8127.38 via Playwright. Phone-size and short landscape tests used touch and mobile viewport emulation. All rows passed checks for page and share panel overflow, text clipping, image loading, primary action visibility, and 48 CSS pixel control targets. The checks also covered opening the share panel, copying the email and canonical URL, downloading PNG and vCard files, opening More profiles, and validating external destination attributes and local platform marks. The Y value is the bottom of the lower edge of Open Portfolio or Save Contact in the initial viewport.
+Chrome 158.0.8127.38 via Playwright. Phone-size and short landscape tests used touch and mobile viewport emulation. All rows passed checks for page and share panel overflow, text clipping, image loading, primary action visibility, and 48 CSS pixel control targets. The checks also covered opening the share panel, copying the email and canonical URL, downloading PNG and vCard files, opening Other profiles, and validating external destination attributes and local platform marks. The Y value is the bottom of the lower edge of Open profile or Save profile in the initial viewport.
 
 | Viewport | Primary action bottom | Screenshot |
 | --- | ---: | --- |
@@ -19,20 +19,20 @@ Chrome 158.0.8127.38 via Playwright. Phone-size and short landscape tests used t
 | 402 × 874 | 363 px | [Full page](screenshots/viewports/402x874.png) |
 | 412 × 915 | 363 px | [Full page](screenshots/viewports/412x915.png) |
 | 430 × 932 | 363 px | [Full page](screenshots/viewports/430x932.png) |
+| 568 × 320 | 287 px | [Full page](screenshots/viewports/568x320.png) |
 | 600 × 800 | 373 px | [Full page](screenshots/viewports/600x800.png) |
-| 768 × 1024 | 363 px | [Full page](screenshots/viewports/768x1024.png) |
-| 1024 × 768 | 394 px | [Full page](screenshots/viewports/1024x768.png) |
-| 1280 × 800 | 423 px | [Full page](screenshots/viewports/1280x800.png) |
-| 1440 × 900 | 423 px | [Full page](screenshots/viewports/1440x900.png) |
-| 1920 × 1080 | 423 px | [Full page](screenshots/viewports/1920x1080.png) |
-| 2560 × 1080 | 423 px | [Full page](screenshots/viewports/2560x1080.png) |
-| 568 × 320 | 288 px | [Full page](screenshots/viewports/568x320.png) |
-| 667 × 375 | 288 px | [Full page](screenshots/viewports/667x375.png) |
-| 844 × 390 | 363 px | [Full page](screenshots/viewports/844x390.png) |
-| 932 × 430 | 363 px | [Full page](screenshots/viewports/932x430.png) |
-| 1024 × 430 | 363 px | [Full page](screenshots/viewports/1024x430.png) |
-| 1280 × 720 | 423 px | [Full page](screenshots/viewports/1280x720.png) |
-| 1366 × 768 | 423 px | [Full page](screenshots/viewports/1366x768.png) |
+| 667 × 375 | 287 px | [Full page](screenshots/viewports/667x375.png) |
+| 768 × 1024 | 409 px | [Full page](screenshots/viewports/768x1024.png) |
+| 844 × 390 | 287 px | [Full page](screenshots/viewports/844x390.png) |
+| 932 × 430 | 287 px | [Full page](screenshots/viewports/932x430.png) |
+| 1024 × 430 | 287 px | [Full page](screenshots/viewports/1024x430.png) |
+| 1024 × 768 | 409 px | [Full page](screenshots/viewports/1024x768.png) |
+| 1280 × 720 | 409 px | [Full page](screenshots/viewports/1280x720.png) |
+| 1280 × 800 | 409 px | [Full page](screenshots/viewports/1280x800.png) |
+| 1366 × 768 | 409 px | [Full page](screenshots/viewports/1366x768.png) |
+| 1440 × 900 | 409 px | [Full page](screenshots/viewports/1440x900.png) |
+| 1920 × 1080 | 409 px | [Full page](screenshots/viewports/1920x1080.png) |
+| 2560 × 1080 | 409 px | [Full page](screenshots/viewports/2560x1080.png) |
 
 [Phone first screen](screenshots/phone.png) · [iPhone 16-sized first screen](screenshots/iphone-16.png) · [Desktop first screen](screenshots/desktop.png) · [Phone share panel](screenshots/sharing-phone.png)
 
@@ -50,7 +50,7 @@ Android Chrome, Samsung Internet, Safari and Chrome on iOS, Safari on iPadOS, an
 
 ## Current design regression
 
-Rebuilt the default phone view around two primary actions and two visible profiles. At 402 × 874, the main actions end at y=363 px and both project previews fit within the viewport.
+The default view shows four choices with Other profiles collapsed. At 402 × 874, all four fit above y=474 px. The compact landscape layout keeps both primary actions in view at 568 × 320.
 
 ## Earlier findings corrected and retested
 
@@ -62,6 +62,6 @@ Rebuilt the default phone view around two primary actions and two visible profil
 
 ## Accessibility, speed and physical status
 
-Axe found zero violations at 390 × 844 and 1440 × 900 with sharing open, and at 402 × 874 with both disclosures open. Reflow at 320 px and 200% text also passed with both open. Keyboard and text-spacing checks passed. Mobile Lighthouse scored 100 for Performance, Accessibility, Best Practices and SEO with simulated mobile throttling. LCP was 0.75 s and CLS 0.00025. The largest observed event duration in a separate throttled interaction sample was 32 ms. [Detailed measurements](TEST_REPORT.md) · [Lighthouse report](reports/lighthouse-mobile.report.html)
+Axe found zero violations at 402 × 874 and 1440 × 900 with Other profiles expanded. Mobile Lighthouse scored 100 for Performance, Accessibility, Best Practices and SEO with simulated mobile throttling. LCP was 0.75 s and CLS 0.00025. The largest observed event duration in a separate throttled interaction sample was 32 ms. [Detailed measurements](TEST_REPORT.md) · [Lighthouse report](reports/lighthouse-mobile.report.html)
 
 Physical NFC, device camera QR scans, contact import and OS share-sheet behavior require verification after approved deployment. See the [NFC programming and device checklist](NFC_SETUP.md).
