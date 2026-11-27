@@ -1,46 +1,85 @@
-# Sanskar Tiwari — Digital Identity
+# CrimsonID
 
-An NFC visiting card with a racing-red editorial cover, direct portfolio and contact actions, and a numbered directory for professional, engineering and creator profiles.
+Static NFC visiting card and digital identity page for Sanskar Tiwari, built with a racing-red editorial cover, direct contact and portfolio actions, an inline QR code, and a categorized profile directory.
 
-The production candidate is `https://santiwari07.qzz.io/card`. The public URL currently serves the portfolio fallback. Preview the new card locally before integrating it with the portfolio.
+Production target: `https://santiwari07.qzz.io/card`
 
-## Run locally
+## Overview
 
-Use Node.js 22 or later.
+CrimsonID compiles a single profile module into a zero-framework static site (`dist/card/index.html`) along with self-hosted fonts, brand icons, a downloadable UTF-8 vCard (`sanskar-tiwari.vcf`), and SVG/PNG QR codes generated from the canonical URL.
+
+Core visitor actions:
+
+- **Explore my work**: Opens the primary portfolio (`https://santiwari07.qzz.io/`).
+- **Save contact**: Downloads `sanskar-tiwari.vcf` (vCard 3.0) for direct import into Contacts.
+- **View projects**: Links to the engineering showcase (`https://santiwari07.github.io/`).
+- **Email me**: Opens the default mail client via `mailto:`.
+- **Scan QR**: Scrolls directly to the inline QR code (`#profile-qr`) for camera-to-phone sharing.
+- **Profile directory**: Groups links across **The Network** (LinkedIn, GitHub), **Proof of Work** (Devpost, Zenodo, LeetCode, Kaggle), and **Building in Public** (YouTube, Instagram).
+
+All links, contact downloads, and the inline QR work without JavaScript. Client-side JS (`assets/card.js`) is limited to hiding broken portrait images if loading fails.
+
+## Preview
+
+| Mobile (390 x 844) | Desktop (1440 x 900) |
+| --- | --- |
+| ![Mobile view of CrimsonID](screenshots/phone.png) | ![Desktop view of CrimsonID](screenshots/desktop.png) |
+
+Full mobile scroll view: [screenshots/editorial-mobile.png](screenshots/editorial-mobile.png)
+
+## Local development
+
+Requires **Node.js 22** or later.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open [the local card](http://127.0.0.1:4743/card). If the port is in use, set `CARD_PREVIEW_PORT` to a free port and open the address printed by the preview server. Run `npm run build` for the static files in `dist/`.
+Open `http://127.0.0.1:4743/card` in your browser. If port `4743` is busy, set `CARD_PREVIEW_PORT`:
 
-## What visitors can do
+```sh
+CARD_PREVIEW_PORT=8080 npm run dev
+```
 
-- Open the main profile, browse other profiles, or visit the separate project showcase.
-- Save a vCard or open their email app. Copy the email address from the share panel.
-- Share through the device share sheet where available, copy the card URL, or download the QR as PNG or SVG.
+To generate the production static bundle in `dist/` without starting the preview server:
 
-Profile text, links, contact details and the canonical URL are maintained in `profile.mjs`. The build renders static HTML and generates the vCard and both QR formats. Essential links, downloads and manual copying work with JavaScript disabled.
+```sh
+npm run build
+```
 
-## Browser screenshots
+## Repository structure
 
-| Phone · 390 × 844 | Desktop · 1440 × 900 |
-| --- | --- |
-| ![Chrome screenshot of the digital card on a phone-size viewport](screenshots/phone.png) | ![Chrome screenshot of the centered digital identity card on a desktop-size viewport](screenshots/desktop.png) |
+```text
+.
+├── assets/                 # Stylesheet, minimal JS, favicon, fonts, images, and brand logos
+├── docs/                   # Design system, research, specifications, NFC setup, and reports
+├── reports/                # Lighthouse mobile audit outputs (HTML and JSON)
+├── screenshots/            # Reference captures and responsive viewport matrix
+├── scripts/
+│   ├── build.mjs           # Generates dist/card/ and dist/card-assets/
+│   └── preview.mjs         # Local static preview server with vCard download headers
+├── src/
+│   ├── integrations.mjs    # Generates vCard 3.0 (.vcf) and QR codes (.svg, .png)
+│   ├── profile.mjs         # Single source of truth for bio, URLs, assets, and links
+│   └── render.mjs          # Renders semantic HTML, Open Graph tags, and JSON-LD
+├── package.json
+└── vercel.json             # Vercel static output, /card rewrite, and vCard headers
+```
 
-[Full mobile cover and directory](screenshots/editorial-mobile.png) · [Previous responsive baseline](RESPONSIVE_TEST_REPORT.md)
+## Updating profile content
+
+Edit [src/profile.mjs](src/profile.mjs) to update personal details, links, portrait metadata, or the `canonicalUrl`, then run `npm run build` to regenerate the HTML, vCard, and QR assets together. See [docs/MAINTENANCE.md](docs/MAINTENANCE.md) for asset and URL guidelines.
 
 ## Documentation
 
 | Document | Coverage |
 | --- | --- |
-| [Research](RESEARCH.md) | Thirteen examples, standards and hosting options |
-| [Design system](DESIGN_SYSTEM.md) | Three concepts, selected direction and visual rules |
-| [Project specification](PROJECT_SPECIFICATION.md) | Source audit, verified content and implementation architecture |
-| [NFC setup](NFC_SETUP.md) | Identify, write, read back and test an NDEF URI record |
-| [Test report](TEST_REPORT.md) | Functional, performance and accessibility results |
-| [Deployment](DEPLOYMENT.md) | Local build, Vercel configuration and portfolio integration |
-| [Maintenance](MAINTENANCE.md) | Content, asset and canonical URL updates |
-
-Physical Android and iPhone NFC, native share sheets and Contacts import are pending. Keep the tag writable until the approved production page has been verified end to end.
+| [Design system](docs/DESIGN_SYSTEM.md) | Visual concepts, color tokens, typography, and layout rules |
+| [Project specification](docs/PROJECT_SPECIFICATION.md) | Source audit, verified data, and static architecture |
+| [Research](docs/RESEARCH.md) | Reference benchmarks, standards, and hosting options |
+| [Deployment](docs/DEPLOYMENT.md) | Local build, Vercel routing, and portfolio integration |
+| [Maintenance](docs/MAINTENANCE.md) | Content updates, asset hygiene, and canonical URL safety |
+| [NFC setup](docs/NFC_SETUP.md) | Tag inspection, NDEF URI writing, and device verification |
+| [Test report](docs/TEST_REPORT.md) | Functional checks, Lighthouse metrics, and accessibility |
+| [Responsive test report](docs/RESPONSIVE_TEST_REPORT.md) | 21-viewport Chrome matrix and cross-browser results |
