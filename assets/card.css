@@ -178,33 +178,8 @@ button, input { font: inherit; }
 .directory-section { border-top: 1px solid var(--line); padding-top: .7rem; margin-top: .9rem; }
 .directory-section:first-child { border-color: var(--accent); margin-top: 0; }
 .directory-section h2 { margin-bottom: .35rem; }
-.share-panel { margin-top: .6rem; border-block: 1px solid var(--line); }
-summary {
-  min-height: 3rem;
-  padding: .7rem 0;
-  cursor: pointer;
-  color: var(--text);
-  font-weight: 600;
-}
-summary::marker { color: var(--accent); }
-.share-content { display: grid; gap: 1rem; padding: .25rem 0 .85rem; }
-.share-tools { min-width: 0; }
-.share-buttons, .downloads { display: flex; flex-wrap: wrap; gap: .45rem; }
-.share-tools label { display: block; color: var(--muted); font-size: .875rem; margin: .6rem 0 .25rem; }
-.share-tools input {
-  width: 100%;
-  min-height: 3rem;
-  padding: .5rem;
-  border: 1px solid var(--control);
-  border-radius: 0;
-  background: var(--surface);
-  color: var(--text);
-}
-.action-status { margin-top: .4rem; }
-.action-status:empty { margin: 0; }
-.share-qr img { height: auto; background: #fff; }
-.downloads { gap: .8rem; }
-.downloads a { font-size: .875rem; }
+#profile-qr { text-align: center; }
+.profile-qr { display: block; width: min(200px, 100%); height: auto; margin: .65rem auto 0; background: #fff; }
 
 .link-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: .8rem; }
 .link-entry {
