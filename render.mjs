@@ -88,23 +88,13 @@ export function renderCard(profile) {
     '<nav class="actions" aria-label="Primary actions"><a class="action action-primary" href="' +
       html(portfolioUrl) + '">Explore my work</a><a class="action" href="' + asset +
       'sanskar-tiwari.vcf" download>Save contact</a><a class="action" href="' + html(showcaseUrl) +
-      '">View projects</a><a class="action" href="mailto:' + html(email) + '">Email me</a><a class="action share-jump" href="#share-panel">Share profile</a></nav></section>',
+      '">View projects</a><a class="action" href="mailto:' + html(email) + '">Email me</a><a class="action" href="#profile-qr">Scan QR</a></nav></section>',
     '<div class="directory"><section class="directory-section network"><h2 class="eyebrow">THE NETWORK</h2>' +
       linkList([{ name: "LinkedIn", url: linkedInUrl, logo: "logos/linkedin.svg" }, ...professionalProfiles]) + '</section>',
     '<section class="directory-section"><h2 class="eyebrow">PROOF OF WORK</h2>' + linkList(engineeringProfiles) + '</section>',
     '<section class="directory-section"><h2 class="eyebrow">BUILDING IN PUBLIC</h2>' + linkList(socialProfiles) + '</section>',
-    '<section class="directory-section"><h2 class="eyebrow"><b>05</b> / MAKE CONTACT</h2>',
-    '<details class="share-panel" id="share-panel"><summary>Share and contact</summary>',
-    '<div class="share-content"><div class="share-tools">',
-    '<div class="share-buttons"><a class="action" href="mailto:' + html(email) + '">Email me</a><button class="action" id="native-share" type="button" hidden>Share digital card</button>' +
-      '<button class="action" data-copy="card-address" type="button" hidden>Copy link</button>' +
-      '<button class="action" data-copy="email-address" type="button" hidden>Copy email</button></div>',
-    '<label for="card-address">Card URL</label><input id="card-address" value="' + html(canonicalUrl) + '" readonly>',
-    '<label for="email-address">Email address</label><input id="email-address" value="' + html(email) + '" readonly>',
-    '<p id="action-status" class="action-status" role="status"></p></div>',
-    '<div class="share-qr"><img src="' + asset + 'card-qr.svg" width="168" height="168" loading="lazy" alt="QR code for the digital identity card">' +
-      '<div class="downloads"><a href="' + asset + 'card-qr.png" download>Download PNG</a>' +
-      '<a href="' + asset + 'card-qr.svg" download>Download SVG</a></div></div></div></details></section></div></main>',
+    '<section class="directory-section" id="profile-qr" aria-labelledby="qr-title"><h2 class="eyebrow" id="qr-title">Scan to open profile</h2>',
+    '<img class="profile-qr" src="' + asset + 'card-qr.svg" width="200" height="200" alt="QR code for the digital identity card"></section></div></main>',
     '<footer class="footer">' + '<strong>LESS TALK.<br><span>MORE BUILDING.</span></strong><p>' + html(city) + '</p></footer></div></body></html>'
   ].join("\n");
 }
